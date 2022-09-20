@@ -132,7 +132,7 @@ public class OwnerControllerTests {
             .param("lastName", "Bloggs")
             .param("address", "123 Caramel Street")
             .param("city", "London")
-            .param("telephone", "01616291589122211")
+            .param("telephone", "6085551023")
         )
             .andExpect(status().is3xxRedirection())
             .andExpect(view().name("redirect:/owners/{ownerId}"));
@@ -160,7 +160,7 @@ public class OwnerControllerTests {
             .andExpect(model().attribute("owner", hasProperty("firstName", is("George"))))
             .andExpect(model().attribute("owner", hasProperty("address", is("110 W. Liberty St."))))
             .andExpect(model().attribute("owner", hasProperty("city", is("Madison"))))
-            .andExpect(model().attribute("owner", hasProperty("telephone", is("6085551023"))))
+            .andExpect(model().attribute("owner", hasProperty("telephone", is("60855510238877888"))))
             .andExpect(view().name("owners/ownerDetails"));
     }
 
