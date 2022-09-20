@@ -132,7 +132,7 @@ public class OwnerControllerTests {
             .param("lastName", "Bloggs")
             .param("address", "123 Caramel Street")
             .param("city", "London")
-            .param("telephone", "01616291589")
+            .param("telephone", "01616291589122211")
         )
             .andExpect(status().is3xxRedirection())
             .andExpect(view().name("redirect:/owners/{ownerId}"));
